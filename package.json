@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "dependencies": {
+    "lerna": "^8.1.8"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "lerna run start --scope=web",
+    "dev:server":"lerna run hardhat-node --scope=server",
+    "deploy":"lerna run deploy --scope=server",
+    "test":"lerna run test --scope=server",
+    "mockOffChain":"lerna run mockOffChain --scope=server"
+  }
+}
